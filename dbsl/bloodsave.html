@@ -1,0 +1,155 @@
+{% load crispy_forms_tags %}
+{% block context %}
+    
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Donate Blood Save Life</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.ico" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+<style>
+    .ourclass{
+        background: url("1.jpg") !important;
+    }
+</style>
+</head>
+<body class="ourclass" style="background-color:  #acdcee;">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+      <a class="navbar-brand" href="#">
+        <img src="drop.png" width="28" height="45" alt="">
+      </a>
+      <h1 class="logo me-auto text-white"><a href="index.html">Donate Blood<span>,</span>&nbsp;
+         Save Life<span>.</span></a></h1>
+      
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">Need Blood?</a></li>
+          <li><a class="nav-link scrollto" href="index.html#becomedonorform">Become A Donor</a></li>
+          <li><a class="nav-link scrollto " href="#portfolio">About Us</a></li>
+          
+          
+          <li class="dropdown"><a href="#"><span>Charity Work</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Our Free Book Distribution Campaign</a></li>
+              <li class="dropdown"><a href="#"><span>Free Medical Aid And Advice</span> 
+             
+            
+              
+              <li><a href="#">Gallery</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      
+    </div>
+  </header><!-- End Header -->
+  <!-- Breadcrumb -->
+  <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Library</li>
+    </ol>
+  </nav>
+
+<!-- Breadcrumb -->
+
+
+<!-- form -->
+
+<div class="container py-5 mt-5 m-0 pl-5" data-aos="fade-up">
+
+    <div class="row no-gutters">
+      <div class="content align-items-center">
+        <div class="content">
+          <strong><h3 class="text-white">আমরা সর্বদা আপনার পাশে আছি।</h3></strong>
+          <p>
+            <strong><h4 class="text-white">কবে, কখন রক্ত প্রয়োজন সেটি আমাদের জানিয়ে দিন ফরম পূরণ করার মাধ্যমে, ইনশাআল্লাহ্‌, আমরা সংগ্রহ করে দেওয়ার সর্বোচ্চ চেষ্টা করবো।</h4></strong>
+          </p>
+          <a href="#" class="about-btn"><span>About us</span> <i class="bx bx-chevron-right"></i></a>
+        </div>
+      </div>
+      
+        
+      <div class="container mt-5">
+        <form action="" method="POST" autocomplete="off">
+            {% csrf_token %}
+            {{ form.name | as_crispy_field }}
+            {{ form.bloodgp | as_crispy_field }}
+    
+            <div class="row">
+                <div class="col-md-8">
+                    {{ form.address | as_crispy_field }}
+                    <div class="col-md-4"> 
+                        {{ form.contact | as_crispy_field }}
+                        {{ form.date | as_crispy_field }}
+                        {{ form.prequirement | as_crispy_field }}
+                        
+                    </div>
+                </div>
+                
+            </div>
+            <button class="btn btn-success mt-4">Submit</button>
+    
+    
+        </form>
+    </div>
+    
+
+ 
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+{% endblock %}
